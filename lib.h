@@ -14,7 +14,7 @@ typedef struct {
     Item itens[MAX];
     int tamanho;
 } Lista;
-
+void copiarString(char *dest, const char *src);
 // inicializa a lista (tamanho = 0)
 void inicializarLista(Lista *L);
 void inserirInicio(Lista *L, const char *nome, int rg);
