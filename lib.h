@@ -1,6 +1,7 @@
 #ifndef SEQ_H
 #define SEQ_H
 
+#include<stdio.h>
 #include <time.h>
 
 #define MAX 100
