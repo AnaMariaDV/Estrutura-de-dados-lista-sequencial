@@ -11,38 +11,38 @@ Todas as operações são acompanhadas por métricas empíricas que incluem:
 - **Tempo de execução**: medido via `clock()` da biblioteca padrão  
 - **Posição**: índice (1‑based) onde ocorre a operação  
 
-Essas métricas possibilitam uma análise comparativa de desempenho, fundamental para estudos acadêmicos e otimização de algoritmos de listas.
+    Essas métricas possibilitam uma análise comparativa de desempenho, fundamental para estudos acadêmicos e otimização de algoritmos de listas.
 
-## Estrutura do Repositório 📂🗂️🔧
+    ## Estrutura do Repositório 📂🗂️🔧
 
-- `lib.h`               – Definições de `Item`, `Lista` e protótipos de função
-- `copiaString.c`       – Cópia de cadeias de caracteres sem `<string.h>`
-- `inicializarLista.c`  – Inicialização da lista (tamanho = 0)
-- `inserirInicio.c`     – Inserção no início com métricas
-- `inserirFim.c`        – Inserção no fim com métricas
-- `inserirPosicao.c`    – Inserção em posição arbitrária com métricas
-- `removerInicio.c`     – Remoção do início com métricas
-- `removerFim.c`        – Remoção do fim com métricas
-- `removerPosicao.c`    – Remoção em posição arbitrária com métricas
-- `buscaPorRg.c`        – Busca sequencial por RG com métricas
-- `imprimirLista.c`     – Exibição do conteúdo da lista
-- `salvarLista.c`       – Persistência em arquivo CSV
-- `lerLista.c`          – Carregamento a partir de CSV
-- `sairDoSistema.c`     – Finalização graciosa da aplicação
-- `menuSequencial.c`    – Interface de usuário via switch‑case
-- `main.c`              – Ponto de entrada que invoca o menu
+    - `lib.h`               – Definições de `Item`, `Lista` e protótipos de função
+    - `copiaString.c`       – Cópia de cadeias de caracteres sem `<string.h>`
+    - `inicializarLista.c`  – Inicialização da lista (tamanho = 0)
+    - `inserirInicio.c`     – Inserção no início com métricas
+    - `inserirFim.c`        – Inserção no fim com métricas
+    - `inserirPosicao.c`    – Inserção em posição arbitrária com métricas
+    - `removerInicio.c`     – Remoção do início com métricas
+    - `removerFim.c`        – Remoção do fim com métricas
+    - `removerPosicao.c`    – Remoção em posição arbitrária com métricas
+    - `buscaPorRg.c`        – Busca sequencial por RG com métricas
+    - `imprimirLista.c`     – Exibição do conteúdo da lista
+    - `salvarLista.c`       – Persistência em arquivo CSV
+    - `lerLista.c`          – Carregamento a partir de CSV
+    - `sairDoSistema.c`     – Finalização graciosa da aplicação
+    - `menuSequencial.c`    – Interface de usuário via switch‑case
+    - `main.c`              – Ponto de entrada que invoca o menu
 
-## Compilação e Execução 💻🔧🎉
+    ## Compilação e Execução 💻🔧🎉
 
-Para compilar todos os módulos e gerar o executável, utilize o GCC:
+    Para compilar todos os módulos e gerar o executável, utilize o GCC:
 
-```bash
-gcc *.c -o programa.exe
-```
+    ```bash
+    gcc *.c -o programa.exe
+    ```
 
-Em seguida, execute o programa:
+    Em seguida, execute o programa:
 
-```bash
-./programa.exe
-```
+    ```bash
+    ./programa.exe
+    ```
 
