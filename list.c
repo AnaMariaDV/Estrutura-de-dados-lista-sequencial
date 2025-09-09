@@ -1,7 +1,6 @@
 // list.c
 #include "lib.h"
 
-/* Crescimento dinâmico */
 void ensureCapacity(Lista *L) {
     if (L->tamanho >= L->capacidade) {
         int nova = (L->capacidade == 0 ? 4 : L->capacidade * 2);
@@ -12,7 +11,7 @@ void ensureCapacity(Lista *L) {
     }
 }
 
-/* Cópia de string sem <string.h> */
+
 void copiarString(char *dest, const char *src) {
     int i = 0;
     while (i < 49 && src[i] != '\0') {
@@ -21,7 +20,7 @@ void copiarString(char *dest, const char *src) {
     }
     dest[i] = '\0';
 }
-/* Inicialização e liberação */
+
 void inicializarLista(Lista *L) {
     L->itens = NULL;
     L->tamanho = L->capacidade = 0;
@@ -33,7 +32,6 @@ void liberarLista(Lista *L) {
     L->tamanho = L->capacidade = 0;
 }
 
-/* Inserções */
 void inserirInicio(Lista *L, const char *nome, int rg) {
     ensureCapacity(L);
     for (int i = L->tamanho; i > 0; --i)
@@ -61,7 +59,6 @@ void inserirPosicao(Lista *L, const char *nome, int rg, int pos) {
     L->tamanho++;
 }
 
-/* Remoções */
 void removerInicio(Lista *L) {
     if (L->tamanho == 0) return;
     for (int i = 0; i < L->tamanho - 1; ++i)
@@ -83,7 +80,6 @@ void removerPosicao(Lista *L, int pos) {
     L->tamanho--;
 }
 
-/* Busca */
 void buscarPorRG(Lista *L, int rg) {
     for (int i = 0; i < L->tamanho; ++i)
         if (L->itens[i].rg == rg) {
@@ -94,7 +90,7 @@ void buscarPorRG(Lista *L, int rg) {
     printf("RG %d nao encontrado\n", rg);
 }
 
-/* Impressão */
+
 void imprimirLista(Lista *L) {
     for (int i = 0; i < L->tamanho; ++i)
         printf("%d: %s, %d\n",

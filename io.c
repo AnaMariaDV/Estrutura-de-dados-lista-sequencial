@@ -1,7 +1,6 @@
 // io.c
 #include "lib.h"
 
-/* Salvar em CSV */
 void salvarLista(Lista *L, const char *filename) {
     FILE *f = fopen(filename, "w");
     if (!f) { perror("fopen"); return; }
@@ -12,7 +11,7 @@ void salvarLista(Lista *L, const char *filename) {
     fclose(f);
 }
 
-/* Ler de CSV */
+
 void lerLista(Lista *L, const char *filename) {
     FILE *f = fopen(filename, "r");
     if (!f) { perror("fopen"); return; }
