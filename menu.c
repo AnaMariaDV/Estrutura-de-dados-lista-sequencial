@@ -1,4 +1,3 @@
-// menu.c
 #include "lib.h"
 
 void sairDoSistema(void) {
@@ -35,16 +34,26 @@ void menuSequencial(Lista *L) {
                 scanf(" %49[^\n]", nome);
                 printf("RG:   ");
                 scanf("%d", &rg);
+
+                iniciarMetricas();
+                iniciarTempo();
                 inserirInicio(L, nome, rg);
+                imprimirMetricas("Inserir no Inicio");
                 break;
+
             case 2:
                 printf("\n-- Inserir no Fim --\n");
                 printf("Nome: ");
                 scanf(" %49[^\n]", nome);
                 printf("RG:   ");
                 scanf("%d", &rg);
+
+                iniciarMetricas();
+                iniciarTempo();
                 inserirFim(L, nome, rg);
+                imprimirMetricas("Inserir no Fim");
                 break;
+
             case 3:
                 printf("\n-- Inserir na Posicao N --\n");
                 printf("Nome:    ");
@@ -53,51 +62,78 @@ void menuSequencial(Lista *L) {
                 scanf("%d", &rg);
                 printf("Posicao: ");
                 scanf("%d", &posicao);
+
+                iniciarMetricas();
+                iniciarTempo();
                 inserirPosicao(L, nome, rg, posicao);
+                imprimirMetricas("Inserir na Posicao N");
                 break;
+
             case 4:
                 printf("\n-- Remover do Inicio --\n");
+
+                iniciarMetricas();
+                iniciarTempo();
                 removerInicio(L);
+                imprimirMetricas("Remover do Inicio");
                 break;
+
             case 5:
                 printf("\n-- Remover do Fim --\n");
+
+                iniciarMetricas();
+                iniciarTempo();
                 removerFim(L);
+                imprimirMetricas("Remover do Fim");
                 break;
+
             case 6:
                 printf("\n-- Remover da Posicao N --\n");
                 printf("Posicao: ");
                 scanf("%d", &posicao);
+
+                iniciarMetricas();
+                iniciarTempo();
                 removerPosicao(L, posicao);
+                imprimirMetricas("Remover da Posicao N");
                 break;
+
             case 7:
                 printf("\n-- Buscar por RG --\n");
                 printf("RG:      ");
                 scanf("%d", &rg);
+
+                iniciarMetricas();
+                iniciarTempo();
                 buscarPorRG(L, rg);
+                imprimirMetricas("Buscar por RG");
                 break;
+
             case 8:
                 printf("\n-- Exibir Lista --\n");
                 imprimirLista(L);
                 break;
+
             case 9:
                 printf("\n-- Salvar Lista em Arquivo --\n");
                 printf("Nome do arquivo: ");
                 scanf(" %99s", arquivo);
                 salvarLista(L, arquivo);
                 break;
+
             case 10:
                 printf("\n-- Carregar Lista de Arquivo --\n");
                 printf("Nome do arquivo: ");
                 scanf(" %99s", arquivo);
                 lerLista(L, arquivo);
                 break;
+
             case 0:
                 sairDoSistema();
                 break;
+
             default:
                 printf("\nOpcao invalida! Tente novamente.\n");
         }
-        
     } while (opcao != 0);
 }
-

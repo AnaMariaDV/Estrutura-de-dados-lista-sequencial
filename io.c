@@ -1,4 +1,3 @@
-// io.c
 #include "lib.h"
 
 void salvarLista(Lista *L, const char *filename) {
@@ -10,7 +9,6 @@ void salvarLista(Lista *L, const char *filename) {
                 L->itens[i].rg);
     fclose(f);
 }
-
 
 void lerLista(Lista *L, const char *filename) {
     FILE *f = fopen(filename, "r");

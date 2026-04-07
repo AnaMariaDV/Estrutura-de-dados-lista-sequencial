@@ -26,12 +26,12 @@ double obterTempoSegundos(void) {
 void imprimirMetricas(const char *operacao) {
     double tempo = obterTempoSegundos();
 
-    printf("\n=====================================\n");
+    printf("\n---------------------------------------\n");
     printf("Operacao: %s\n", operacao);
     printf("C(n) - Comparacoes  : %ld\n", metricasAtual.comparacoes);
     printf("M(n) - Movimentacoes: %ld\n", metricasAtual.movimentacoes);
     printf("Tempo               : %.8f s\n", tempo);
-    printf("=====================================\n");
+    printf("\n---------------------------------------\n");
 }
 
 void ensureCapacity(Lista *L) {
