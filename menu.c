@@ -97,6 +97,7 @@ void menuSequencial(Lista *L) {
             default:
                 printf("\nOpcao invalida! Tente novamente.\n");
         }
+        
     } while (opcao != 0);
 }
 

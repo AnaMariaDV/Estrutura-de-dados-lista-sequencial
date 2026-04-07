@@ -1,4 +1,3 @@
-// lib.h
 #ifndef LIB_H
 #define LIB_H
 
@@ -14,10 +13,26 @@ typedef struct {
 
 /* Lista sequencial dinâmica */
 typedef struct {
-    Item *itens;     // vetor alocado dinamicamente
-    int   tamanho;   // quantidade de elementos atuais
-    int   capacidade;// quantidade de slots alocados
+    Item *itens;      // vetor alocado dinamicamente
+    int   tamanho;    // quantidade de elementos atuais
+    int   capacidade; // quantidade de slots alocados
 } Lista;
+
+/* Métricas de desempenho */
+typedef struct {
+    long comparacoes;   /* C(n) */
+    long movimentacoes; /* M(n) */
+} Metricas;
+
+/* Controle das métricas */
+void iniciarMetricas(void);
+Metricas obterMetricas(void);
+
+/* Controle de tempo */
+void iniciarTempo(void);
+double obterTempoSegundos(void);
+
+void imprimirMetricas(const char *operacao);
 
 /* Funções de manipulação da lista */
 void copiarString(char *dest, const char *src);

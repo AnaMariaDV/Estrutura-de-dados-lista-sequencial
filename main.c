@@ -1,7 +1,8 @@
 // main.c
 #include "lib.h"
 
-int main(void) {
+int main() 
+{
     Lista clientes;
     inicializarLista(&clientes);
     menuSequencial(&clientes);
