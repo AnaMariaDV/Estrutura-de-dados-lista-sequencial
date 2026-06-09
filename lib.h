@@ -5,36 +5,33 @@
 #include <stdlib.h>
 #include <time.h>
 
-/* Estrutura de um cliente */
 typedef struct {
     char nome[50];   // até 49 caracteres + '\0'
     int  rg;         // RG de 9 dígitos
 } Item;
 
-/* Lista sequencial dinâmica */
+
 typedef struct {
-    Item *itens;      // vetor alocado dinamicamente
-    int   tamanho;    // quantidade de elementos atuais
-    int   capacidade; // quantidade de slots alocados
+    Item *itens;      
+    int   tamanho;    
+    int   capacidade; 
 } Lista;
 
-/* Métricas de desempenho */
 typedef struct {
-    long comparacoes;   /* C(n) */
-    long movimentacoes; /* M(n) */
+    long comparacoes;   
+    long movimentacoes; 
 } Metricas;
 
-/* Controle das métricas */
+
 void iniciarMetricas(void);
 Metricas obterMetricas(void);
 
-/* Controle de tempo */
+
 void iniciarTempo(void);
 double obterTempoSegundos(void);
 
 void imprimirMetricas(const char *operacao);
 
-/* Funções de manipulação da lista */
 void copiarString(char *dest, const char *src);
 void ensureCapacity(Lista *L);
 void inicializarLista(Lista *L);
